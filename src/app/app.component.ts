@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular2';
+  formularioUno = new FormGroup({
+    nombre : new FormControl(''),
+    apellido : new FormControl(''),
+    cedula : new FormControl(''),
+    numero : new FormControl(''),
+    area : new FormControl(''),
+    profesion : new FormControl(''),
+    salario :  new FormControl('')
+  });
 }
